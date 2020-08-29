@@ -12,7 +12,6 @@ RUN npm install
 
 # execute command tsc 
 RUN npm run build
-
 # Expose the port the app runs in
 EXPOSE 3000
 
