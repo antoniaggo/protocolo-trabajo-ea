@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import coursesRoutes from './routes/courses.routes';
+import authRoutes from './routes/auth.routes';
 
 
 // initializations
@@ -22,7 +23,7 @@ app.use(express.json());
   return res.status(400).send(`The API is at http://localhost:${app.get('port')}`);
 }); */
 
-
+app.use(authRoutes);
 app.use(coursesRoutes);
 
 export default app;
